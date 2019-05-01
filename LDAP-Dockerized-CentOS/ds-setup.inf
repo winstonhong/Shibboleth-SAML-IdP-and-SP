@@ -1,0 +1,28 @@
+[General]
+AdminDomain =example.com
+ConfigDirectoryAdminID = admin
+ConfigDirectoryAdminPwd = ldap-passwd
+ConfigDirectoryLdapURL = ldap://localhost:389/o=NetscapeRoot
+FullMachineName = localhost
+ServerRoot = /usr/lib64/dirsrv
+SuiteSpotGroup = nobody
+SuiteSpotUserID = nobody
+
+[admin]
+Port = 9830
+ServerAdminID = admin
+ServerAdminPwd = ldap-passwd
+ServerIpAddress = 0.0.0.0
+SysUser = nobody
+
+[slapd]
+AddOrgEntries = Yes
+AddSampleEntries = No
+InstallLdifFile = suggest
+RootDN = cn=Directory Manager
+RootDNPwd = ldap-passwd
+ServerIdentifier = dir
+ServerPort = 389
+SlapdConfigForMC = yes
+Suffix = dc=example,dc=com
+UseExistingMC = No
