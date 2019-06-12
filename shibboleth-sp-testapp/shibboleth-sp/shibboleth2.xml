@@ -87,7 +87,7 @@
         <!--
         <MetadataProvider type="XML" validate="true" file="partner-metadata.xml"/>
         -->
-        <MetadataProvider type="XML" file="idpsaml-metadata.xml"/>
+        <MetadataProvider type="XML" file="idp-metadata.xml"/>
 
         <!-- Map to extract attributes from SAML assertions. -->
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
