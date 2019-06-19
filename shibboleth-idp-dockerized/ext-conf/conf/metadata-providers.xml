@@ -72,5 +72,10 @@
 		metadataFile="/opt/shibboleth-idp/metadata/sp-example-org.xml"
 		maxRefreshDelay="PT48H">
     </MetadataProvider>	
+
+    <MetadataProvider id="SalesforceMD" xsi:type="FilesystemMetadataProvider"
+		metadataFile="/opt/shibboleth-idp/metadata/sp-salesforce-com.xml"
+		maxRefreshDelay="PT48H">
+    </MetadataProvider>
     
 </MetadataProvider>

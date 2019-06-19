@@ -38,15 +38,9 @@
         <ref bean="shibboleth.SAML2PersistentGenerator" />
         -->
 
-        <!--
         <bean parent="shibboleth.SAML2AttributeSourcedGenerator"
             p:format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
             p:attributeSourceIds="#{ {'mail'} }" />
-        -->
-
-        <bean parent="shibboleth.SAML2AttributeSourcedGenerator"
-            p:format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
-            p:attributeSourceIds="#{ {'idqEmail'} }" />
 
     </util:list>
 
