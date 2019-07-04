@@ -16,6 +16,7 @@ givenName: Winston
 cn: Winston Hong
 mail: winston.hong@example.com
 userPassword: winston-passwd
+employeeType: arn:aws:iam::my-aws-id:role/shibbolethidp,arn:aws:iam::my-aws-id:saml-provider/Shibboleth-IdP
 
 dn: uid=ethansmith,ou=People,dc=example,dc=com
 objectClass: organizationalPerson
@@ -28,3 +29,4 @@ givenName: Ethan
 cn: Ethan Smith
 mail: ethan.smith@example.com
 userPassword: ethan-passwd
+employeeType: arn:aws:iam::my-aws-id:role/shibbolethidp,arn:aws:iam::my-aws-id:saml-provider/Shibboleth-IdP

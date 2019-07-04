@@ -77,5 +77,11 @@
 		metadataFile="/opt/shibboleth-idp/metadata/sp-salesforce-com.xml"
 		maxRefreshDelay="PT48H">
     </MetadataProvider>
+
+    <MetadataProvider id="AWSMD" xsi:type="FilesystemMetadataProvider"
+		xmlns="urn:mace:shibboleth:2.0:metadata"
+		metadataFile="/opt/shibboleth-idp/metadata/sp-aws-amazon-com.xml"
+		maxRefreshDelay="PT48H">
+    </MetadataProvider>
     
 </MetadataProvider>

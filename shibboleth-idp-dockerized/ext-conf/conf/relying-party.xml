@@ -82,6 +82,15 @@
                 </list>
             </property>
         </bean>
+
+        <bean parent="RelyingPartyByName" c:relyingPartyIds="urn:amazon:webservices">
+            <property name="profileConfigurations">
+                <list>
+                    <bean parent="SAML2.SSO" p:encryptAssertions="false" p:encryptNameIDs="false"
+                          p:signResponses="false" p:signAssertions="true" />
+                </list>
+            </property>
+        </bean>
         
     </util:list>
 
