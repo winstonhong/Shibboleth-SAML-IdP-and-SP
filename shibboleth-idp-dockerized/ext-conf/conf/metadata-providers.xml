@@ -83,5 +83,13 @@
 		metadataFile="/opt/shibboleth-idp/metadata/sp-aws-amazon-com.xml"
 		maxRefreshDelay="PT48H">
     </MetadataProvider>
+
+    <MetadataProvider id="OFFICE365MD" xsi:type="FilesystemMetadataProvider"
+		xmlns="urn:mace:shibboleth:2.0:metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:mace:shibboleth:2.0:metadata http://shibboleth.net/schema/idp/shibboleth-metadata.xsd"
+		failFastInitialization="true"
+		metadataFile="/opt/shibboleth-idp/metadata/sp-office365.xml"
+		maxRefreshDelay="PT48H">
+    </MetadataProvider>
     
 </MetadataProvider>

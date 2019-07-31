@@ -40,7 +40,24 @@
 
         <bean parent="shibboleth.SAML2AttributeSourcedGenerator"
             p:format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
-            p:attributeSourceIds="#{ {'mail'} }" />
+            p:attributeSourceIds="#{ {'mail'} }">
+	    <property name="activationCondition">
+		<bean parent="shibboleth.Conditions.NOT">
+		    <constructor-arg>
+			<bean parent="shibboleth.Conditions.RelyingPartyId" c:candidates="urn:federation:MicrosoftOnline" />
+		    </constructor-arg>
+		</bean>
+	    </property>
+	 </bean>
+
+	<!-- Microsoft requires a custom Persistent ID Generator that sends the AD GUID -->
+	<bean parent="shibboleth.SAML2AttributeSourcedGenerator"
+	    p:format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+	    p:attributeSourceIds="#{ {'ImmutableID'} }">
+	    <property name="activationCondition">
+		<bean parent="shibboleth.Conditions.RelyingPartyId" c:candidates="urn:federation:MicrosoftOnline" />
+	    </property>
+	</bean>
 
     </util:list>
 

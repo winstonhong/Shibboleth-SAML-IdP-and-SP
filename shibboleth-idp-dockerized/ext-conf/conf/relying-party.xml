@@ -91,6 +91,23 @@
                 </list>
             </property>
         </bean>
+
+        <bean parent="RelyingPartyByName"
+              c:relyingPartyIds="urn:federation:MicrosoftOnline">
+            <property name="profileConfigurations">
+                <list>
+		    <bean parent="SAML2.SSO"
+                        p:encryptAssertions="false"
+                        p:signAssertions="true"
+                        p:signResponses="false" />
+		    <bean parent="SAML2.ECP"
+                        p:encryptAssertions="false"
+                        p:signAssertions="true"
+                        p:signResponses="false"
+                        p:nameIDFormatPrecedence="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" />
+                </list>
+            </property>
+        </bean>
         
     </util:list>
 

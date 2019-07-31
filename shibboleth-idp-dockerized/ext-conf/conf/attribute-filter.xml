@@ -32,6 +32,14 @@
 	    <PermitValueRule xsi:type="ANY"/>
 	</AttributeRule>
 
+        <AttributeRule attributeID="ImmutableID">
+            <PermitValueRule xsi:type="ANY"/>
+        </AttributeRule>
+
+        <AttributeRule attributeID="UserId">
+            <PermitValueRule xsi:type="ANY"/>
+        </AttributeRule>
+
     </AttributeFilterPolicy>
 
 </AttributeFilterPolicyGroup>
