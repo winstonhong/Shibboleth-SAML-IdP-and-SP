@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="https://www.okta.com/saml2/service-provider/splhadtihmhlnmphnoxh" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"><md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><md:KeyDescriptor use="encryption"><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:X509Data><ds:X509Certificate>MIIDpDCCAoygAwIBAgIGAV8XQeQmMA0GCSqGSIb3DQEBCwUAMIGSMQswCQYDVQQGEwJVUzETMBEG
+A1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEU
+MBIGA1UECwwLU1NPUHJvdmlkZXIxEzARBgNVBAMMCmRldi05OTE5MTMxHDAaBgkqhkiG9w0BCQEW
+DWluZm9Ab2t0YS5jb20wHhcNMTcxMDEzMTk0MDU1WhcNMjcxMDEzMTk0MTU0WjCBkjELMAkGA1UE
+BhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDTALBgNV
+BAoMBE9rdGExFDASBgNVBAsMC1NTT1Byb3ZpZGVyMRMwEQYDVQQDDApkZXYtOTkxOTEzMRwwGgYJ
+KoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+g9Q9NW6qzuBOVm19YNz3EzokeW/Y1tcMS54uchXVDiPPx4H6ZaLMMaN+CaMdvzF7uN6ccuU6mFov
+BqL+puKMcTkNX0XJJpsG1AArgLN4eE4YJ5TKjkXXeQlTRsuuD+i5RCNK5g8UJOdF38Gfe0O4hFnR
+nY6yZtc/sPfesSoo9Cx9fX6rMSUzeHxxFuCdw9c5/wpYHJ49BMAt+jbdPlPSxtxPX23TPaNt2HSG
+hd4YYxlR/1CdFZfHzd0ZOPA5sPbrB2E5hohNT/Hl0VOviPx0w+w5/gDsoKO0qiJ+Iq1V+cropb1H
+j7rkhT3aASZMLTprIaa5mT9cGTPVtloosreVLwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAw6eKy
+UrC38x0gcuDyiEx5wm/adMf1eCv09jurY3F5DEEC1KNyjvzqD1DG2le00BW9m9NtXTra4dFwkG5f
+gA5uagFA9R8prRLOxAsTeqlOkeRajEN/CLVb10njfxA1Rfxs7FeRX7f3iDqWYraqc3/boPaGeLKS
+nX4hraU5cVHE5y2QHacNDWZiO/mjRrwsc2RkEHH3jduohhsokHujD+ih95uk5ar/S1Ylcq9PlVIg
+/4QSy8VX0nJaWi7TBTM3Tr12J4Uj+vdTpUZGIdMcx86HGkWSZqc++TUNm55pKFIthBevoRLmVkYA
+DSrx/Hg+etszbUxbCviEDNFOVfnoegMp</ds:X509Certificate></ds:X509Data></ds:KeyInfo><md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/><md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/><md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/><md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/></md:KeyDescriptor><md:KeyDescriptor use="signing"><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:X509Data><ds:X509Certificate>MIIDpDCCAoygAwIBAgIGAV8XQeQmMA0GCSqGSIb3DQEBCwUAMIGSMQswCQYDVQQGEwJVUzETMBEG
+A1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEU
+MBIGA1UECwwLU1NPUHJvdmlkZXIxEzARBgNVBAMMCmRldi05OTE5MTMxHDAaBgkqhkiG9w0BCQEW
+DWluZm9Ab2t0YS5jb20wHhcNMTcxMDEzMTk0MDU1WhcNMjcxMDEzMTk0MTU0WjCBkjELMAkGA1UE
+BhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDTALBgNV
+BAoMBE9rdGExFDASBgNVBAsMC1NTT1Byb3ZpZGVyMRMwEQYDVQQDDApkZXYtOTkxOTEzMRwwGgYJ
+KoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+g9Q9NW6qzuBOVm19YNz3EzokeW/Y1tcMS54uchXVDiPPx4H6ZaLMMaN+CaMdvzF7uN6ccuU6mFov
+BqL+puKMcTkNX0XJJpsG1AArgLN4eE4YJ5TKjkXXeQlTRsuuD+i5RCNK5g8UJOdF38Gfe0O4hFnR
+nY6yZtc/sPfesSoo9Cx9fX6rMSUzeHxxFuCdw9c5/wpYHJ49BMAt+jbdPlPSxtxPX23TPaNt2HSG
+hd4YYxlR/1CdFZfHzd0ZOPA5sPbrB2E5hohNT/Hl0VOviPx0w+w5/gDsoKO0qiJ+Iq1V+cropb1H
+j7rkhT3aASZMLTprIaa5mT9cGTPVtloosreVLwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAw6eKy
+UrC38x0gcuDyiEx5wm/adMf1eCv09jurY3F5DEEC1KNyjvzqD1DG2le00BW9m9NtXTra4dFwkG5f
+gA5uagFA9R8prRLOxAsTeqlOkeRajEN/CLVb10njfxA1Rfxs7FeRX7f3iDqWYraqc3/boPaGeLKS
+nX4hraU5cVHE5y2QHacNDWZiO/mjRrwsc2RkEHH3jduohhsokHujD+ih95uk5ar/S1Ylcq9PlVIg
+/4QSy8VX0nJaWi7TBTM3Tr12J4Uj+vdTpUZGIdMcx86HGkWSZqc++TUNm55pKFIthBevoRLmVkYA
+DSrx/Hg+etszbUxbCviEDNFOVfnoegMp</ds:X509Certificate></ds:X509Data></ds:KeyInfo></md:KeyDescriptor><md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat><md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat><md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat><md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat><md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://example.okta.com/sso/saml2/0oamzgee0axVzpnr10h7" index="0" isDefault="true"/><md:AttributeConsumingService index="0"><md:RequestedAttribute FriendlyName="First Name" Name="firstName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/><md:RequestedAttribute FriendlyName="Last Name" Name="lastName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/><md:RequestedAttribute FriendlyName="Email" Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/><md:RequestedAttribute FriendlyName="Mobile Phone" Name="mobilePhone" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/></md:AttributeConsumingService></md:SPSSODescriptor><md:Organization><md:OrganizationName xml:lang="en">example</md:OrganizationName><md:OrganizationDisplayName xml:lang="en">Example Inc.</md:OrganizationDisplayName><md:OrganizationURL xml:lang="en">https://example.com</md:OrganizationURL></md:Organization></md:EntityDescriptor>

@@ -91,5 +91,10 @@
 		metadataFile="/opt/shibboleth-idp/metadata/sp-office365.xml"
 		maxRefreshDelay="PT48H">
     </MetadataProvider>
+
+    <MetadataProvider id="OktaMD" xsi:type="FilesystemMetadataProvider"
+		metadataFile="/opt/shibboleth-idp/metadata/sp-okta-com.xml"
+		maxRefreshDelay="PT48H">
+    </MetadataProvider>
     
 </MetadataProvider>
