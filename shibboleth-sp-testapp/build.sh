@@ -1,2 +1,2 @@
-docker build --tag="example/shibboleth-sp:latest" .
-
+#!/bin/bash
+docker build -t example/shibboleth-sp:latest .
