@@ -96,5 +96,10 @@
 		metadataFile="/opt/shibboleth-idp/metadata/sp-okta-com.xml"
 		maxRefreshDelay="PT48H">
     </MetadataProvider>
-    
+
+    <MetadataProvider id="GSuiteMD" xsi:type="FilesystemMetadataProvider"
+		metadataFile="/opt/shibboleth-idp/metadata/sp-gsuite.xml"
+		maxRefreshDelay="PT48H">
+    </MetadataProvider>
+
 </MetadataProvider>

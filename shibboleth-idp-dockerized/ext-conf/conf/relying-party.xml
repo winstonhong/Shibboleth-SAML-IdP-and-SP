@@ -118,6 +118,16 @@
                 </list>
             </property>
         </bean>
+
+        <bean parent="RelyingPartyByName" c:relyingPartyIds="google.com/a/example.com">
+            <property name="profileConfigurations">
+                <list>
+                    <bean parent="SAML2.SSO" p:encryptAssertions="false" p:encryptNameIDs="false"
+                          p:signResponses="false" p:signAssertions="true"
+                          p:nameIDFormatPrecedence="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress" />
+                </list>
+            </property>
+        </bean>
         
     </util:list>
 
