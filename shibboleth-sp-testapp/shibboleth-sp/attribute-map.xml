@@ -151,4 +151,8 @@
     <Attribute name="urn:oid:2.5.4.4" id="sn" />
     <Attribute name="urn:oid:2.5.4.3" id="cn" />
 
+    <Attribute name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" id="mail" />
+    <Attribute name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" id="givenName" />
+    <Attribute name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" id="sn" />
+
 </Attributes>
