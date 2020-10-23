@@ -16,8 +16,8 @@ ENV JETTY_HOME=/opt/jetty-home \
 ARG java_version=8.0.121
 ARG zulu_version=8.20.0.5
 ARG java_hash=e5f4b1d997e50ffe4998c68c8ec45403
-ARG jetty_version=9.3.16.v20170120
-ARG jetty_hash=f007648daa13799554a95c5ec31d44deac7e56b8
+ARG jetty_version=9.4.32.v20200930
+ARG jetty_hash=b7925b37e0ab6264bfbdf51a2b9167cb957c46f4
 ARG idp_version=3.2.1
 ARG idp_hash=231d100c81f3039f08782cc46067718b2fedf2d988fccc543250fb1813a2bc20
 ARG dta_hash=2f547074b06952b94c35631398f36746820a7697
@@ -40,7 +40,7 @@ RUN cd / \
 
 # Download Jetty, verify the hash, and install, initialize a new base
 RUN cd / \
-    && wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/$jetty_version/jetty-distribution-$jetty_version.tar.gz \
+    && wget https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/$jetty_version/jetty-distribution-$jetty_version.tar.gz \
     && echo "$jetty_hash  jetty-distribution-$jetty_version.tar.gz" | sha1sum -c - \
     && tar -zxvf jetty-distribution-$jetty_version.tar.gz -C /opt \
     && rm jetty-distribution-$jetty_version.tar.gz \
@@ -56,7 +56,7 @@ RUN cd / \
 
 # Download Shibboleth IdP, verify the hash, and install
 RUN cd / \
-    && wget https://shibboleth.net/downloads/identity-provider/$idp_version/shibboleth-identity-provider-$idp_version.tar.gz \
+    && wget  https://shibboleth.net/downloads/identity-provider/archive/$idp_version/shibboleth-identity-provider-$idp_version.tar.gz \
     && echo "$idp_hash  shibboleth-identity-provider-$idp_version.tar.gz" | sha256sum -c - \
     && tar -zxvf  shibboleth-identity-provider-$idp_version.tar.gz -C /opt \
     && rm /shibboleth-identity-provider-$idp_version.tar.gz \
