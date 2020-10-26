@@ -95,4 +95,5 @@ RUN chown -R root:jetty /opt/shib-jetty-base \
 EXPOSE 4443 8443
 
 # Run Shibboleth Jetty Server
+RUN mkdir $JETTY_BASE/tmp
 CMD ["run-jetty.sh"]
