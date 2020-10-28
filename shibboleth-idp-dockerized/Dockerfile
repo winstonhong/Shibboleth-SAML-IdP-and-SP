@@ -2,9 +2,9 @@ FROM centos:centos7
 
 MAINTAINER winstonhong@inBay Technologies Inc.
 
-LABEL idp.java.version="8.0.121" \
-      idp.jetty.version="9.3.16.v20170120" \
-      idp.version="3.2.1"
+LABEL idp.java.version="8.0.272" \
+      idp.jetty.version="9.4.33.v20201020" \
+      idp.version="3.4.7"
 
 ENV JETTY_HOME=/opt/jetty-home \
     JETTY_BASE=/opt/shib-jetty-base \
@@ -13,13 +13,13 @@ ENV JETTY_HOME=/opt/jetty-home \
     JETTY_BACKCHANNEL_SSL_KEYSTORE_PASSWORD=abcde \
     PATH=$PATH:$JRE_HOME/bin
 
-ARG java_version=8.0.121
-ARG zulu_version=8.20.0.5
-ARG java_hash=e5f4b1d997e50ffe4998c68c8ec45403
-ARG jetty_version=9.4.32.v20200930
-ARG jetty_hash=b7925b37e0ab6264bfbdf51a2b9167cb957c46f4
-ARG idp_version=3.2.1
-ARG idp_hash=231d100c81f3039f08782cc46067718b2fedf2d988fccc543250fb1813a2bc20
+ARG java_version=8.0.272
+ARG zulu_version=8.50.0.21
+ARG java_hash=f35c570b1918eaf072fb1fd82b8e3e60
+ARG jetty_version=9.4.33.v20201020
+ARG jetty_hash=365e0d8f311ff04339e63bc7463a63a6cabd99e9
+ARG idp_version=3.4.7
+ARG idp_hash=28B235279EBE6A6644436A42D09A63E7F914E3E2D22330D48A1B8D75B5357ACB
 ARG dta_hash=2f547074b06952b94c35631398f36746820a7697
 
 # Sync latest updates and install dependencies
@@ -32,11 +32,11 @@ RUN useradd jetty -U -s /bin/false
 
 # Download Java, verify the hash, and install
 RUN cd / \
-    && wget http://cdn.azul.com/zulu/bin/zulu$zulu_version-jdk$java_version-linux_x64.tar.gz \
-    && echo "$java_hash  zulu$zulu_version-jdk$java_version-linux_x64.tar.gz" | md5sum -c - \
-    && tar -zxvf zulu$zulu_version-jdk$java_version-linux_x64.tar.gz -C /opt \
-    && rm zulu$zulu_version-jdk$java_version-linux_x64.tar.gz \
-    && ln -s /opt/zulu$zulu_version-jdk$java_version-linux_x64/jre/ /opt/jre-home
+    && wget http://cdn.azul.com/zulu/bin/zulu$zulu_version-ca-jdk$java_version-linux_x64.tar.gz \
+    && echo "$java_hash  zulu$zulu_version-ca-jdk$java_version-linux_x64.tar.gz" | md5sum -c - \
+    && tar -zxvf zulu$zulu_version-ca-jdk$java_version-linux_x64.tar.gz -C /opt \
+    && rm zulu$zulu_version-ca-jdk$java_version-linux_x64.tar.gz \
+    && ln -s /opt/zulu$zulu_version-ca-jdk$java_version-linux_x64/jre/ /opt/jre-home
 
 # Download Jetty, verify the hash, and install, initialize a new base
 RUN cd / \
