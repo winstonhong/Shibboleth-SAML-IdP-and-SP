@@ -12,21 +12,21 @@ git clone https://github.com/winstonhong/Shibboleth-SAML-IdP-and-SP
 ``` 
 + Build and Run OpenLDAP server over Docker Container.
 ```
-cd Shibboleth-SAML-IdP-SP/LDAP-Dockerized-CentOS
+cd Shibboleth-SAML-IdP-and-SP/LDAP-Dockerized-CentOS
 ./build.sh
 ./run.sh
 cd -
 ```
 + Build and Run Shibboleth SAML IdP server over Docker Container.
 ```
-cd Shibboleth-SAML-IdP-SP/shibboleth-idp-dockerized
+cd Shibboleth-SAML-IdP-and-SP/shibboleth-idp-dockerized
 ./build.sh
 ./run.sh
 cd -
 ```
 + Build and Run Shibboleth SAML SP server over Docker Container.
 ```
-cd Shibboleth-SAML-IdP-SP/shibboleth-sp-testapp
+cd Shibboleth-SAML-IdP-and-SP/shibboleth-sp-testapp
 ./build.sh
 ./run.sh
 cd -
