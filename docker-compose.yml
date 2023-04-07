@@ -1,0 +1,27 @@
+version: '3'
+services:
+  openldap:
+    container_name: openldap
+    image: example/openldap:latest
+    ports:
+      - "389:389"
+  shibboleth-idp:
+    container_name: shibboleth-idp
+    image: example/shibboleth-idp:latest
+    ports:
+      - "443:4443"
+      - "8443:8443"
+      - "80:8080"
+    volumes:
+      - "./shibboleth-idp-dockerized/ext-conf:/opt/shibboleth-idp-ext-conf"
+    environment:
+      - "JETTY_BROWSER_SSL_KEYSTORE_PASSWORD=12345"
+      - "JETTY_BACKCHANNEL_SSL_KEYSTORE_PASSWORD=abcde"
+    links:
+      - "openldap:openldap"
+  shibboleth-sp:
+    container_name: shibboleth-sp
+    image: example/shibboleth-sp:latest
+    ports:
+      - "2080:80"
+      - "2443:443"

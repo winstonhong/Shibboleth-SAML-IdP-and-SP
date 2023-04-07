@@ -31,6 +31,19 @@ cd Shibboleth-SAML-IdP-and-SP/shibboleth-sp-testapp
 ./run.sh
 cd -
 ```
++ In addition to running three (3) servers using separate scripts as described above, we can Run OpenLDAP server, Shibboleth SAML IdP server and SP server using docker compose.
+```
+cd Shibboleth-SAML-IdP-and-SP/LDAP-Dockerized-CentOS
+./build.sh
+cd -
+cd Shibboleth-SAML-IdP-and-SP/shibboleth-idp-dockerized
+./build.sh
+cd -
+cd Shibboleth-SAML-IdP-and-SP/shibboleth-sp-testapp
+./build.sh
+cd -
+docker-compose up
+```
 
 Shibboleth SAML IdP and SAML SP Demo
 ------------
