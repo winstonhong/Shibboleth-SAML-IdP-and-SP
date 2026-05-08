@@ -22,8 +22,13 @@ ARG idp_version=3.4.7
 ARG idp_hash=28B235279EBE6A6644436A42D09A63E7F914E3E2D22330D48A1B8D75B5357ACB
 ARG dta_hash=2f547074b06952b94c35631398f36746820a7697
 
+# CentOS 7 is EOL; mirrorlist.centos.org no longer works — use vault.centos.org.
 # Sync latest updates and install dependencies
-RUN yum -y update \
+RUN sed -i \
+        -e 's|^mirrorlist=|#mirrorlist=|g' \
+        -e 's|^#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' \
+        /etc/yum.repos.d/CentOS-*.repo \
+    && yum -y update \
     && yum -y install wget tar which \
     && yum -y clean all
 

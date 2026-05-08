@@ -1,12 +1,19 @@
-version: '3'
+# Mirrors the three manual steps: LDAP → IdP → SP (same images, ports, env, volumes).
+# From repo root: `docker compose up --build` builds each Dockerfile then starts in order.
+
 services:
   openldap:
     container_name: openldap
+    build:
+      context: ./LDAP-Dockerized-CentOS
     image: example/openldap:latest
     ports:
       - "389:389"
+
   shibboleth-idp:
     container_name: shibboleth-idp
+    build:
+      context: ./shibboleth-idp-dockerized
     image: example/shibboleth-idp:latest
     ports:
       - "443:4443"
@@ -15,13 +22,22 @@ services:
     volumes:
       - "./shibboleth-idp-dockerized/ext-conf:/opt/shibboleth-idp-ext-conf"
     environment:
-      - "JETTY_BROWSER_SSL_KEYSTORE_PASSWORD=12345"
-      - "JETTY_BACKCHANNEL_SSL_KEYSTORE_PASSWORD=abcde"
-    links:
-      - "openldap:openldap"
+      JETTY_BROWSER_SSL_KEYSTORE_PASSWORD: "12345"
+      JETTY_BACKCHANNEL_SSL_KEYSTORE_PASSWORD: "abcde"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - openldap
+
   shibboleth-sp:
     container_name: shibboleth-sp
+    build:
+      context: ./shibboleth-sp-testapp
     image: example/shibboleth-sp:latest
     ports:
       - "2080:80"
       - "2443:443"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - shibboleth-idp

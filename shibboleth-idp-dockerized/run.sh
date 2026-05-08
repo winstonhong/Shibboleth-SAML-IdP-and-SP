@@ -1,4 +1,5 @@
 #!/bin/bash
+docker stop shibboleth-idp
 docker run --rm \
            -it \
            -d \
@@ -10,4 +11,4 @@ docker run --rm \
 	   -p 80:8080   \
            --link openldap:openldap \
 	   --name="shibboleth-idp" \
-           example/shibboleth-idp:latest $@
+           example/shibboleth-idp:latest

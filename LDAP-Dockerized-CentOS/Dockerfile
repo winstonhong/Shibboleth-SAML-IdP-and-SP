@@ -2,7 +2,18 @@ FROM centos:centos7
 
 MAINTAINER John Gasper <jgasper@unicon.net>
 
-RUN yum install -y epel-release \
+# CentOS 7 / EPEL 7 are EOL; mirrorlist.centos.org and EPEL metalink no longer work.
+# Point yum at vault.centos.org and the Fedora Project EPEL archive before installing packages.
+RUN sed -i \
+        -e 's|^mirrorlist=|#mirrorlist=|g' \
+        -e 's|^#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' \
+        /etc/yum.repos.d/CentOS-*.repo \
+    && yum install -y epel-release \
+    && sed -i -E \
+        -e 's|^metalink=|#metalink=|g' \
+        -e 's|^mirrorlist=|#mirrorlist=|g' \
+        -e 's|^#baseurl=https?://download\.fedoraproject\.org/pub/epel|baseurl=https://archives.fedoraproject.org/pub/archive/epel|g' \
+        /etc/yum.repos.d/epel*.repo \
     && yum update -y \
     && yum install -y 389-ds-base 389-adminutil \
     && yum clean all
